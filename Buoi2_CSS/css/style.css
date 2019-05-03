@@ -1,0 +1,118 @@
+/*--RESET--*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--LOGO--*/
+#logo img {
+    width: 120px;
+}
+
+/*--MENU--*/
+.menu ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.menu ul {
+    background-color: black;
+    /* padding: 10px 0; */
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/*--COVER--*/
+.cover {
+    background-image: url("../img/slider_1.jpg");
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*--INTRO--*/
+.intro-left, .intro-right, .nha-tam, .sofa {
+    float: left;
+    width: 49%;
+}
+.intro img {
+    width: 100%;
+}
+
+.intro-left, .nha-tam {
+    margin-right: 2%;
+}
+
+.phong-khach, .nhatam-sofa {
+    margin-bottom: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+/*--PRODUCT--*/
+
+.product .title {
+    text-align: center;
+}
+/*COMBO1*/
+.product-item {
+    float: left;
+    width: 24%;
+    padding: 0 1%;
+}
+
+.product-item img {
+    width: 100%;
+}
+
+.product h5 {
+    font-size: 20px;
+}
+
+.product button {
+    color: white;
+    background-color: red;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.product p, button {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+/*--BANNER--*/
+
+.banner {
+    background-image: url("../img/nature.jpg");/* COMBO-2 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 500px;
+    color:white;
+    position: relative;
+}
+
+.circle {/* COMBO-3 */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: rgba(195, 27, 27, 0.5);
+    text-align: center;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
+
+.circle p:first-child {
+    font-size: 30px;
+    padding: 30px 0;
+}
