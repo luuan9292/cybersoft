@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.material {
+    width: 40%;
+    margin: 8% auto;
+    height: 100px;
+}
+
+.material .hero-top-app-bar {
+    position: relative;
+    width: 100%;
+}
+
+.material .mdc-typography--headline4 {
+    text-align: center;
+    margin: 30px 0 60px 0;
+}
+
+.form__component {
+    border: .1px solid rgb(216, 213, 213);
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.form__info .form__input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.form__info .switch-demo {
+    padding: 20px 20px;
+}
+
+.switch-demo label {
+    margin-left: 20px;
+}

@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+.header__navbar .nav-item {
+    position: relative;
+}
+
+/* tim hieu so sanh dau : va :: */
+.header__navbar .nav-item::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    transition: all .5s;
+}
+
+.header__navbar .nav-item.active::before {
+    width: 100%;
+}
+
+.header__navbar .nav-item:hover::before {
+    width: 100%;
+}
+
+/* carousel */
+
+.myCarousel img {
+    width: 100%;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel__caption {
+    position: absolute;
+    top: 45%;
+    left:22%;
+    color: white;
+    font-weight: 700;
+    width: 35%;
+}
+
+.carousel__caption h1 {
+    color: #fbbd61;
+}
+
+.carousel__trailer span {
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel__trailer button {
+    border: none;
+    outline: none;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    padding: 10px 40px;
+    border-radius: 30px;
+}
+
+.myCarousel .carousel-indicators {
+    padding-bottom: 50px;
+    right: 1 !important;
+
+}
+
+.myCarousel .carousel-indicators li{
+    border-radius:  50%;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.myCarousel .carousel-indicators li.active {
+    background-color: white;
+}
+
+
+
+
+
+
+/*----- MOVIE----- */
+.movie {
+    padding: 80px;
+}
+
+.movie__title {
+    position: relative;
+    color: #ec7532;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.movie__title:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+}
+
+.movie__item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.movie__item img {
+    width: 100%;
+}
+
+/* Ki thuat hover cheo */
+.movie__overlay {
+    position: absolute;
+    top: 0;
+    left: -365%;
+    transform: skewX(45deg);
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    transition: all .5s;
+}
+
+.movie__item:hover .movie__overlay {
+    left: -100%;
+}
+
+.movie__detail {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) scale(0.8);
+    opacity: 0;
+    transition: all .3s;
+}
+
+.movie__item:hover .movie__detail {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+
+.movie__detail i {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+.movie__detail a {
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.movie__detail span {
+    font-size: 16px;
+}
+
+.movie__name {
+    font-size: 18px;
+}
+
+.movie__star {
+    color: #fbbd61
+}
+
+/*----- SHOWTIME----- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

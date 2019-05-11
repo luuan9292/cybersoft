@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Material</title>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section class="material">
+        <header class="hero-top-app-bar mdc-top-app-bar" data-mdc-auto-init="MDCTopAppBar">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"><button
+                        class="material-icons mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+                        style="--mdc-ripple-fg-size:28px; --mdc-ripple-fg-scale:1.71429; --mdc-ripple-left:10px; --mdc-ripple-top:10px;">favorite</button>
+                    <span class="mdc-top-app-bar__title">San Francisco, CA</span></section>
+            </div>
+        </header>
+        <h1 class="mdc-typography--headline4">Welcome React Lovers</h1>
+        <div class="form__component">
+            <form action="#" class="form__info">
+                <div class="form__input">
+                    <div class="mdc-text-field text-field mdc-text-field--with-leading-icon mdc-ripple-upgraded"
+                        data-mdc-auto-init="MDCTextField"
+                        style="--mdc-ripple-fg-size:147px; --mdc-ripple-fg-scale:1.78431; --mdc-ripple-fg-translate-start:33px, -57.2813px; --mdc-ripple-fg-translate-end:49.5px, -45.5px;">
+                        <i class="material-icons mdc-text-field__icon">person</i><input type="text"
+                            id="text-field-filled-leading" class="mdc-text-field__input"><label
+                            class="mdc-floating-label" for="text-field-filled-leading">First Name</label>
+                        <div class="mdc-line-ripple" style="transform-origin: 106.5px center;"></div>
+                    </div>
+                    <div class="mdc-text-field text-field mdc-text-field--with-leading-icon mdc-ripple-upgraded"
+                        data-mdc-auto-init="MDCTextField"
+                        style="--mdc-ripple-fg-size:147px; --mdc-ripple-fg-scale:1.78431; --mdc-ripple-fg-translate-start:33px, -57.2813px; --mdc-ripple-fg-translate-end:49.5px, -45.5px;">
+                        <i class="material-icons mdc-text-field__icon">person</i><input type="text"
+                            id="text-field-filled-leading" class="mdc-text-field__input"><label
+                            class="mdc-floating-label" for="text-field-filled-leading">First Name</label>
+                        <div class="mdc-line-ripple" style="transform-origin: 106.5px center;"></div>
+                    </div>
+                    <div class="mdc-text-field text-field mdc-text-field--with-leading-icon mdc-ripple-upgraded"
+                        data-mdc-auto-init="MDCTextField"
+                        style="--mdc-ripple-fg-size:147px; --mdc-ripple-fg-scale:1.78431; --mdc-ripple-fg-translate-start:33px, -57.2813px; --mdc-ripple-fg-translate-end:49.5px, -45.5px;">
+                        <i class="material-icons mdc-text-field__icon">email</i><input type="text"
+                            id="text-field-filled-leading" class="mdc-text-field__input"><label
+                            class="mdc-floating-label" for="text-field-filled-leading">Email</label>
+                        <div class="mdc-line-ripple" style="transform-origin: 106.5px center;"></div>
+                    </div>
+
+                </div>
+                <div class="switch-demo"><span>
+                        <div class="mdc-switch" data-mdc-auto-init="MDCSwitch">
+                            <div class="mdc-switch__track"></div>
+                            <div class="mdc-switch__thumb-underlay mdc-ripple-upgraded mdc-ripple-upgraded--unbounded"
+                                style="--mdc-ripple-fg-size:28px; --mdc-ripple-fg-scale:1.71429; --mdc-ripple-left:10px; --mdc-ripple-top:10px;">
+                                <div class="mdc-switch__thumb"><input type="checkbox" id="Switch-switch"
+                                        class="mdc-switch__native-control" role="switch" aria-checked="false"></div>
+                            </div>
+                        </div><label for="Switch-switch">Receive updates and mailers</label>
+                    </span></div>
+
+                <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded"
+                    style="--mdc-ripple-fg-size:55px; --mdc-ripple-fg-scale:1.97302; --mdc-ripple-fg-translate-start:25.7344px, -8.28125px; --mdc-ripple-fg-translate-end:18.3516px, -9.5px;"><i
+                        class="material-icons mdc-button__icon">send</i><span
+                        class="mdc-button__label">SEND</span></button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- data-mdc-auto-init="MDCSwitch" Them vao cung script ben duoi de affect cho tat ca element-->
+
+    <script>
+        window.mdc.autoInit();
+    </script>
+
+</body>
+
+</html>
