@@ -188,9 +188,77 @@
 
 /*----- SHOWTIME----- */
 
+.showtime {
+    padding: 80px 0;
+}
 
+.showtime .nav-tabs .nav-link {
+    position: relative;
+    color: #4a4a4a;
+    padding: 10px 30px;
+}
 
+.showtime .nav-tabs .nav-link:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    bottom: -1px;
+    left: 0;
+    transition: all .5s;
+}
 
+.showtime .nav-tabs .nav-link.active,
+.showtime .nav-tabs .nav-link:hover {
+    border-color: white white #dee2e6;
+}
+
+.showtime .nav-tabs .nav-link.active:before,
+.showtime .nav-tabs .nav-link:hover:before {
+    width: 100%;
+}
+
+.showtime__movie img {
+    border-radius: 10px;
+}
+
+.showtime__list {
+    color: #717171;
+}
+
+.showtime__detail > span {
+    font-size: 14px;
+    color: #ec7532;
+    letter-spacing: 2px;
+}
+
+.showtime__detail > h1 {
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.showtime__detail > p {
+    font-size: 16px;
+}
+
+.showtime__detail > a {
+    font-size: 12px;
+    color: #ec7532;
+    letter-spacing: 3px;
+}
+
+.showtime__detail i, .showtime__list span {
+    font-size: 14px;
+}
+
+.showtime__length span {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    line-height: 35px;  
+}
 
 
 
