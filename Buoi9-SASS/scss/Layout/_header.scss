@@ -1,0 +1,54 @@
+.header {
+    .navbar-brand {
+        flex-grow: 1;
+        img {
+            width: 117px;
+        }
+    }
+    .categories {
+        flex-grow: 1;
+    }
+    .input__search {
+        flex-grow: 5;
+        .input-group {
+            .form-control {
+                background-color: $color-white-cream;
+                border: none;
+                &:focus {
+                    box-shadow: none;
+                    background-color: $color-white-0;
+                    border: 1px solid $color-gray-3;
+                    border-right: none;
+                    transition: none;
+                    & + .input-group-prepend { // dau + cung cap phia sau truc tiep the do
+                        .input-group-text {
+                            background-color: $color-white-0;
+                            border: 1px solid $color-gray-3;
+                            border-left: none;                                                  
+                        }
+                        &:hover {
+                            .input-group-text {
+                                background-color: $color-red-0;
+                                color: $color-white-0
+
+                            }
+                        }
+                    }
+                }
+            }
+            .input-group-prepend {
+                .input-group-text {
+                    background-color: $color-white-cream;
+                    border: none;
+                    color: $color-red-0;
+                }
+                &:hover {
+                    .input-group-text {
+                        background-color: $color-red-0;
+                        color: $color-white-0;
+                    }
+                }
+            }
+        }
+    }
+}

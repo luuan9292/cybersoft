@@ -64,6 +64,7 @@
                     </span></div>
 
                 <button class="demo-button mdc-button mdc-button--raised mdc-ripple-upgraded"
+                    data-mdc-auto-init="MDCRipple"
                     style="--mdc-ripple-fg-size:55px; --mdc-ripple-fg-scale:1.97302; --mdc-ripple-fg-translate-start:25.7344px, -8.28125px; --mdc-ripple-fg-translate-end:18.3516px, -9.5px;"><i
                         class="material-icons mdc-button__icon">send</i><span
                         class="mdc-button__label">SEND</span></button>
@@ -77,6 +78,20 @@
     <script>
         window.mdc.autoInit();
     </script>
+
+    <!-- hoac ko dung data init nhung phai lam cho tung doi tuong
+    <script>
+        var texts = document.querySelectorAll('.mdc-text-field');
+        console.log(text);
+        for(var i = 0; i < texts.length; i++) {
+            mdc.textField.MDCTextField.attachTo(texts[i]);
+        }
+
+        hoac dung foreach
+        texts.forEach(element => {
+            mdc.textField.MDCTextField.attachTo(element);
+        });
+    </script> -->
 
 </body>
 
