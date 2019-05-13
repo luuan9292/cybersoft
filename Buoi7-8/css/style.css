@@ -4,6 +4,38 @@
     box-sizing: border-box;
 }
 
+.section__title {
+    position: relative;
+    color: #ec7532;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.section__title:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+}
+
+.video__play {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+/* Header */
+
 .header {
     position: absolute;
     z-index: 2;
@@ -90,33 +122,9 @@
 }
 
 
-
-
-
-
 /*----- MOVIE----- */
 .movie {
     padding: 80px;
-}
-
-.movie__title {
-    position: relative;
-    color: #ec7532;
-    font-size: 18px;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-.movie__title:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 200px;
-    height: 3px;
-    background: linear-gradient(to right, #fbbd61, #ec7532);
 }
 
 .movie__item {
@@ -157,16 +165,6 @@
 .movie__item:hover .movie__detail {
     opacity: 1;
     transform: translateY(-50%) scale(1);
-}
-
-.movie__detail i {
-    width: 80px;
-    height: 80px;
-    font-size: 20px;
-    border-radius: 50%;
-    border: 2px solid white;
-    line-height: 80px;
-    cursor: pointer;
 }
 
 .movie__detail a {
@@ -260,7 +258,87 @@
     line-height: 35px;  
 }
 
+/* Coming */
 
+.coming {
+    background-color: #000
+}
+
+.coming__bg {
+    padding: 80px 0;
+    background: url('../img/slide-3.png') no-repeat center center;
+    background-size: cover;
+}
+
+.coming__bg .section__title {
+    color: white;
+}
+
+.coming__detail > span {
+    font-size: 14px;
+    color: #ec7532;
+}
+
+.coming__detail h1 {
+    font-weight: 300;
+    font-size: 34px;
+}
+
+.coming__detail .fa-star {
+    font-size: 14px;
+    color: #fbbd61;
+}
+
+.coming__date {
+    opacity: .75;
+    font-size: 14px;
+}
+
+.coming__detail a {
+    color: #ec7532;
+    letter-spacing: 3px;
+}
+
+.coming__trailer {
+    position: relative;
+}
+
+.coming__trailer .video__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-color: #ec7532;
+    transition: all .2s;
+    font-size: 20px;
+}
+
+.coming__trailer .video__play:hover {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.coming__item {
+    opacity: .4;
+    transition: all .4s;
+}
+
+.coming__item:hover,
+.coming__item.active {
+    opacity: 1;
+}
+
+.coming__item img {
+    border-radius: 10px;
+}
+
+.coming__item span {
+    font-size: 14px;
+    opacity: .75;
+}
+
+.coming__list {
+    padding: 40px 0;
+}
 
 
 
