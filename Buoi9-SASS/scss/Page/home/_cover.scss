@@ -1,0 +1,35 @@
+.cover {
+    position: relative;
+    background-image: url("../img/cover.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 50vh;
+    .cover__content {
+        position: absolute;
+        color: $color-white-0;
+        top: 30%;
+        left: 10%;
+        h1 {
+            padding-right: 10%;
+        }
+        p{
+            padding-right: 10%;
+        }
+        .input__search {
+            padding-right: 10%;
+            border: none;
+            .form-control {
+                padding: 6%;
+                border: none;
+            }
+            .input-group-prepend {
+                .input-group-text{
+                    background-color: $color-white-0;
+                    border: none;
+                    color: $color-red-0;
+                }
+            }
+        }
+    }
+}
