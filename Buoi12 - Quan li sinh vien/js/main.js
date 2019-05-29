@@ -5,7 +5,7 @@
  */
 
  function TimSinhVienGioiNhat() {
-     var mangDiem = [];
+    var mangDiem = [];
      //B1: Lay danh sach diem.
     var mangThe = document.getElementsByClassName('td-diem');
     for(var i = 0; i < mangThe.length; i++) {
