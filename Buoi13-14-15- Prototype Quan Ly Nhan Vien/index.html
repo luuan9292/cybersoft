@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Quản lý nhân viên</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="container" style="margin-bottom: 30px;">
+		<div class="row centered-form">
+			<div class="col-xs-12 col-sm-6 center wow fadeInUp">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title text-center">Quản lý nhân viên</h3>
+					</div>
+					<div class="panel-body">
+						<form role="form">
+							<div class="container">
+								<div class="row">
+									<div class="col-xs-4 col-sm-4 col-md-4">
+										<div class="form-group">
+											<input type="text" name="msnv" id="msnv" class="form-control input-sm"
+												placeholder="Mã nhân viên">
+											<span class="sp-thongbao" id="thongBaoMaNV"></span>
+										</div>
+									</div>
+									<div class="col-xs-8 col-sm-8 col-md-8">
+										<div class="form-group">
+											<input type="text" name="hoten" id="hoten"
+												class="form-control input-sm floatlabel" placeholder="Họ tên">
+											<span class="sp-thongbao" id="thongBaoHoTen"></span>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<input type="number" name="songaylam" id="songaylam" class="form-control input-sm"
+										placeholder="Số ngày làm">
+									<span class="sp-thongbao" id="dateOfWork"></span>
+								</div>
+								<div class="row">
+									<div class="col-xs-6 col-sm-6 col-md-6">
+										<div class="form-group">
+											<div style="display: flex;">
+												<input type="text" name="ngayvaolam" id="datepicker"
+													class="form-control input-sm" placeholder="Ngày vào làm">
+											</div>
+											<span class="sp-thongbao"></span>
+										</div>
+
+									</div>
+								</div>
+								<div class="form-group">
+									<select class="form-control" id="chucvu">
+										<option>Chọn chức vụ</option>
+										<option>Sếp</option>
+										<option>Trưởng phòng</option>
+										<option>Nhân viên</option>
+									</select>
+									<span class="sp-thongbao"></span>
+								</div>
+								<input type="button" value="Thêm Nhân Viên" id="themNhanVien" class="btn btn-info btn-block">
+								<input type="button" value="Cập Nhật" id="capNhatNV" class="btn btn-info btn-block">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="hienthi" class="container">
+		<input type="text" class="form-control w-50" id="searchField" onkeyup="timNhanVien()" placeholder='Tim...'">
+		<table class="table table-bordered">
+			<thead>
+				<tr class="text-white">
+					<th>Mã NV</th>
+					<th>Họ Tên</th>
+					<th>Chức Vụ</th>
+					<th>Số Ngày Làm</th>
+					<th>Tổng Lương</th>
+					<th>#</th>
+				</tr>
+			</thead>
+			<tbody id="tblBody">
+			</tbody>
+		</table>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+	<!-- CODE JS -->
+	<script src="./js/nhanvien.js"></script>
+	<script src="./js/dsnhanvien.js"></script>
+	<script src="./js/main.js"></script>
+
+	<script src="WOW-master/dist/wow.min.js"></script>
+	<script type="text/javascript">
+		new WOW().init();
+	</script>
+
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$(function () {
+			$("#datepicker").datepicker({
+				showOn: "button",
+				buttonImage: "images/calendar.png",
+				buttonImageOnly: true,
+				buttonText: "Select date",
+				dateFormat: "mm/dd/yy"
+
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var d = new Date();
+
+			var month = d.getMonth() + 1;
+			var day = d.getDate();
+
+			var output = (('' + month).length < 2 ? '0' : '') + month + '/' +
+				(('' + day).length < 2 ? '0' : '') + day + '/' +
+				d.getFullYear();
+			$('#datepicker').val(output);
+		});
+	</script>
+
+</body>
+
+</html>
