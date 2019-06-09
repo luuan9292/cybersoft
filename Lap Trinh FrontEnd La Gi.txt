@@ -1,0 +1,3 @@
+backend cung cap RestfulAPI: link hoac GraphQL
+fron end send request thong qua duong link da cho, backe nhan link roi vao trong db lay du lieu
+back end tra ve response front end
