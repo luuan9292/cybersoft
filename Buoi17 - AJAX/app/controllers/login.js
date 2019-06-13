@@ -3,7 +3,6 @@
 var login = function () {
     var txtUsername = $('#txtUsername').val();
     var txtPassword = $('#txtPassword').val();
-    console.log(txtUsername, txtPassword)
     $.ajax({
         url: `http://svcy.myclass.vn/api/QuanLyTrungTam/DangNhap?taikhoan=${txtUsername}&matkhau=${txtPassword} `,
         type: 'GET'
