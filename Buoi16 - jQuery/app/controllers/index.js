@@ -82,6 +82,6 @@ var openEditModal = function() {
 
 //-----ADD EVENTLISTENER-----
 $('#btnThemNguoiDung').click(showAddModal);
-$('body').delegate('#btnAddUser', 'click', addUser);//Dung cho the khi chua co san tren giao dien , xu li van de khi nao co nut moi gan vao, neu khong dung delegate thi no se khoi chay ban dau
+$('body').delegate('#btnAddUser', 'click', addUser);//Dung cho the khi chua co san tren giao dien , xu li van de khi nao co nut moi gan vao, jQuerry khong xu ly nhung thu add vao sau,body thi bao phu tat ca
 $('body').delegate('.btnDeleteUser', 'click', deleteUser);
 $('body').delegate('.btnEditUser', 'click', openEditModal);
