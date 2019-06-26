@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    // "incremental": true,                   /* Enable incremental compilation */
+    "target": "es5",                          /* Cac phien ban muon compile tu js sang javascript (es5, es2015, es2016,...) */
+    "module": "commonjs",                     /* Chon dinh dang khi compile la js */
+    "outDir": "./js",                         /*Thu muc dau cua js*/
+    "sourceMap": true                         /*source map de chay debug tren browser bang typescript*/
+    //file map nay dung de hien thi trong debug
+  }
+}
