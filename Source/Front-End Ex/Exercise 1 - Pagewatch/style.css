@@ -1,0 +1,169 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.container {
+	width: 1170px;
+	margin: 0px auto;
+}
+
+/* Phan Top*/
+
+.top {
+	background-color: black;
+	width: 100%;
+	height: 60px;
+}
+
+#giohang {
+	color: white;
+	float: right;
+	padding-top: 10px;
+	text-align: center;
+}
+
+#giohang a:link, #giohang a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+/*Phan Logo*/
+#logo {
+
+	text-align: center;
+	border-bottom: 1px solid #80808066;
+	padding: 20px;
+}
+
+#logo a:link, #log a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+/*Phan Menu*/
+
+#menuleft {
+	width: 65%;
+	float: left;
+}
+
+#menuleft ul{
+	list-style-type: none;
+}
+
+#menuleft a {
+		float: left;
+		padding: 20px;
+}
+
+#menuleft ul a:link, #menuleft ul a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+#menuleft ul a:hover {
+	color: green;
+}
+
+#menuright {
+	float: left;
+	padding: 20px;
+	width: 25%;
+}
+
+#search {
+	float: right;
+	position: relative;
+}
+
+#tim {
+	height: 30px;
+}
+
+#hinhsearch {
+	background: url(images/search.png) no-repeat;
+	position: absolute;
+	width: 20px;
+	border: none;
+	left: 120px;
+	top: 6px;
+}
+
+/*Phan Slide*/
+
+#slide img {
+	width: 100%;
+}
+
+/*Phan Top San Pham*/
+#topsanpham {
+	padding-top: 30px;
+	height: 300px;
+}
+
+.topsp {
+	float: left;
+	padding: 20px;
+}
+
+/*Phan San Pham*/
+
+.sanpham {
+	border: 1px solid gray;
+	text-align: center;
+	padding: 40px;
+	margin-bottom: 30px;
+	float: left;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+/*Phan Thong Tin*/
+.thongtin {
+	float: left;
+	width: 25%;
+}
+.thongtin li {
+	list-style-type: none;
+}
+
+.thongtin li a {
+	list-style-type: none;
+	text-decoration: none;
+	color: gray;
+}
+
+span.social {
+	width: 34px;
+	height: 34px;
+	display: inline-block;
+}
+
+#facebook {
+	background-image: url(images/s-icons.png);
+	background-position: 0px 0px;
+}
+
+#twitter {
+	background-image: url(images/s-icons.png);
+	background-position: -34px 0px;
+}
+
+#google {
+	background-image: url(images/s-icons.png);
+	background-position: -68px 0px;
+}
+
+.txtsocial {
+	margin-top: -25px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+
+#footleft{
+	height: 50px;
+	margin: 20px;
+}

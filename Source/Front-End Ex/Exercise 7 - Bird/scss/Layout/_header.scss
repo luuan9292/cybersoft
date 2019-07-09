@@ -1,0 +1,46 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2; 
+    .logo__menu{
+        width: 95%;
+        margin: 0 auto;
+        padding: 2% 0;
+        display: flex;
+        justify-content: space-between;
+        .logo {
+            padding-left: 5%;
+            a {
+                position: relative;
+                font-weight: bold;
+                color: $color__white;
+                img {
+                    position: absolute;
+                    left: -40%;
+                    top: -30%;
+                    transform: rotate(-24deg);
+                }
+            }
+        }
+        .menu {
+            .navbar-expand-sm {
+                justify-content: flex-end;
+                .dropdown:hover .dropdown-menu {
+                    display: block;
+                    background-color: black;
+                }
+                
+                li a {
+                        color: $color__white;
+                        font-weight: 700;
+                    }
+                
+            }  
+        }
+    }
+  
+}
+
+
