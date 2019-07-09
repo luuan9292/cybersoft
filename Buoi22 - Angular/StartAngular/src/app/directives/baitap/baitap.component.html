@@ -1,0 +1,37 @@
+<div>
+    <label>Ma SP: </label>
+    <input #productId type='text' />
+</div>
+
+<div>
+    <label>Ten SP: </label>
+    <input #productName type='text' />
+</div>
+
+<div>
+    <label>Gia: </label>
+    <input #productPrice type='text' />
+</div>
+
+<button (click)="addProduct(productId.value, productName.value, productPrice.value)" class='btn btn-success'>Them San
+    Pham</button>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Ma SP</th>
+            <th>Ten SP</th>
+            <th>Gia</th>
+            <th>Thao tac</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of productArr; let n = index">
+            <td>{{n+1}}</td>
+            <td>{{item._id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+        </tr>
+    </tbody>
+</table>

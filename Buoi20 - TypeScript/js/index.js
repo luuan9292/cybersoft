@@ -1,5 +1,3 @@
-//Lenh tsc -b de compile sang js
-//tsc -w de save tu compile
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,23 +11,18 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-//Kieu du lieu, mac dinh khong khai bao la string
 var trangThai = true;
 var tong = 10;
 var title = 'Cybersoft';
-var mangNguoiDung = [1, 2, 3, 4, 5]; //Cach 1
-var mangNguoiDung2 = ['ts', 'js']; //Cach 2
-var mang2PhanTu = ['string', 1]; //kieu Tuple
+var mangNguoiDung = [1, 2, 3, 4, 5];
+var mangNguoiDung2 = ['ts', 'js'];
+var mang2PhanTu = ['string', 1];
 var mangNguoiDungany = ['1', 2, true];
-var thamSo = 1; // any la hon hop, han che su dung any
-//Loc array
+var thamSo = 1;
 var array = [5, 1, 5, 6, 7, 8, 9];
-//Lay ra danh sach cac phan tu co gia tri == 5
 var result = array.filter(function (n) { return n == 5; });
 console.log(result);
-/*----Class----*/
-/*------------*/
-var NguoiDung = /** @class */ (function () {
+var NguoiDung = (function () {
     function NguoiDung(ht, mk, tk) {
         this.HoTen = ht;
         this.MatKhau = mk;
@@ -44,9 +37,7 @@ var NguoiDung = /** @class */ (function () {
     return NguoiDung;
 }());
 var nguoiDung1 = new NguoiDung('hieu', '123', 'hieukt');
-/*----Ket thua----*/
-/*---------------*/
-var NhanVien = /** @class */ (function () {
+var NhanVien = (function () {
     function NhanVien(ten, manv, luongcb) {
         this.Ten = ten;
         this.MaNV = manv;
@@ -57,7 +48,7 @@ var NhanVien = /** @class */ (function () {
     };
     return NhanVien;
 }());
-var TruongPhong = /** @class */ (function (_super) {
+var TruongPhong = (function (_super) {
     __extends(TruongPhong, _super);
     function TruongPhong(ten, manv, luongcb, tienHH) {
         var _this = _super.call(this, ten, manv, luongcb) || this;
@@ -70,7 +61,7 @@ var TruongPhong = /** @class */ (function (_super) {
     return TruongPhong;
 }(NhanVien));
 var truongPhong = new TruongPhong('hieu', '12', 12, 15);
-var NhanVienThuong = /** @class */ (function () {
+var NhanVienThuong = (function () {
     function NhanVienThuong() {
     }
     NhanVienThuong.prototype.TinhTienLuong = function () {
@@ -78,9 +69,7 @@ var NhanVienThuong = /** @class */ (function () {
     };
     return NhanVienThuong;
 }());
-/*----Mang doi tuong----*/
-/*---------------------*/
-var Phim = /** @class */ (function () {
+var Phim = (function () {
     function Phim(maPhim, tenPhim, loaiPhim) {
         this.MaPhim = maPhim;
         this.TenPhim = tenPhim;
@@ -95,14 +84,11 @@ var mangPhim = [
     { MaPhim: 4, TenPhim: "Phim 4", LoaiPhim: "TinhCam" },
     new Phim(5, "Phim 5", "HinhDong")
 ];
-//Lay ra danh sach cac object co thuoc tinh LoaiPhim === HanhDong
 var mangPhimHanhDong = mangPhim.filter(function (Phim) { return Phim.LoaiPhim === "HanhDong"; });
 console.log(mangPhimHanhDong);
-/*----DOM & Gan Su Kien----*/
-/*------------------------*/
-var btnGetEmail = document.getElementById("btnGetEmail"); //Khai bao doi tuong dang dom toi la button
+var btnGetEmail = document.getElementById("btnGetEmail");
 btnGetEmail.addEventListener('click', function () {
-    var email = document.getElementById('txtEmail').value; //Khai bao doi tuong dang dom toi la input
+    var email = document.getElementById('txtEmail').value;
     console.log(email);
 });
 //# sourceMappingURL=index.js.map

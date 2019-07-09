@@ -1,0 +1,29 @@
+<!-- LOAI 1: ONE WAY BINDING -->
+
+<!-- Interpolation: truyen bien ra ngoai man hinh, neu chi muon truyen bien ra ngoai thi dung cho don gian -->
+<div> {{name}} </div>
+<div> {{ name === 'hieu' ? 1 : 2 }} </div>
+
+
+<!-- Property Binding: binding theo thuoc tinh ,Khi bat buoc thay doi thuoc tinh cua the thi dung-->
+<input [value]='name' />
+<div [innerHTML]='name'></div>
+<input [checked]="name==='hieu'" type="checkbox" [value]="name" />
+
+<!-- Event Binding: binding gan su kien -->
+<button (click)="showName()">Show name</button>
+
+
+<!-- Vi du doi name theo value -->
+<!-- #nameInput duoc goi la local reference dai dien cho input o trang HTML, o bat ki noi nao goi cung dai dien cho input, khong duoc dat ten trung voi ten bien -->
+<input #nameInput type="text" [value]='name' />
+
+<!-- thay doi name trong component bang gia tri truyen vao -->
+<button (click)="saveName(nameInput.value)">Save name</button>
+
+<!-- angular co co che auto detection nen thay doi name bat cu noi nao cung bi doi theo -->
+
+
+<!-- LOAI 2: TWO WAY BINDING: tao luong ket noi de thay doi cung luc du lieu, can phai co 1 module ho tro la FormsModule import trong file module-->
+
+<input #nameInput2 type="text" [(ngModel)]="name" />

@@ -1,0 +1,43 @@
+<!-- Directive la nhung class, tinh nang do angular viet san
+    strutural cong dung de thay doi cau truc va giao dien -->
+
+<!-- ngIf -->
+<p *ngIf="!show; else template">demo-directive works!</p>
+<!-- Neu sai thi hien ngIf con nguoc lai thi hien ng-template -->
+
+<!-- ngTemplate -->
+<ng-template #template>
+    <p>Else Condition</p>
+</ng-template>
+
+<!-- ng Switch -->
+<!-- <select #selectMonth (change)="chooseMonth(selectMonth.value)"> -->
+    <!-- hoac co the dung two way -->
+    <!-- <select #selectMonth [(ngModel)]="month"> -->
+    <!-- <option value='1'>January</option>
+    <option value='2'>February</option>
+    <option value='3'>March</option>
+    <option value='4'>April</option>
+</select> -->
+<!-- 
+<div [ngSwitch]="month">
+    <p *ngSwitchCase="1">Thang 1 co 31 ngay</p>
+    <p *ngSwitchCase="2">Thang 2 co 28 ngay</p>
+    <p *ngSwitchCase="3">Thang 3 co 30 ngay</p>
+    <p *ngSwitchCase="4">Thang 4 co 31 ngay</p>
+    <p *ngSwitchDefault>Vui long chon thang</p>
+</div> -->
+
+<!-- ngFor Dung loc phan tu trong mang cho truoc -->
+
+<select #selectMonth (change)="chooseMonth(selectMonth.value)">
+    <option *ngFor="let item of monthArr" [value]='item.value'>{{ item.label }}</option>
+</select>
+
+<div [ngSwitch]="month">
+    <p *ngSwitchCase="1">Thang 1 co 31 ngay</p>
+    <p *ngSwitchCase="2">Thang 2 co 28 ngay</p>
+    <p *ngSwitchCase="3">Thang 3 co 30 ngay</p>
+    <p *ngSwitchCase="4">Thang 4 co 31 ngay</p>
+    <p *ngSwitchDefault>Vui long chon thang</p>
+</div>
