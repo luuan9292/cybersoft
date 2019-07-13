@@ -1,0 +1,14 @@
+<app-ng-class></app-ng-class>
+<app-ng-style></app-ng-style>
+<app-baitap-sanpham></app-baitap-sanpham>
+
+<h3 style="color:red">Attribute Directive (Tu dinh nghia)</h3>
+<div appHighLight>HighLight</div>
+
+<!-- nhu cai ham phai goi moi thuc hien -->
+<ng-template #template>
+    <div>Noi dung template</div>
+</ng-template>
+
+<!-- Goi thuc thi template -->
+<ng-container *ngTemplateOutlet="template"></ng-container>
