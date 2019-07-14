@@ -14,3 +14,7 @@ import { HighLightDirective } from './high-light.directive';
   ]
 })
 export class AttributDirectiveModule { }
+
+
+//ng g c AttributeDirective --module=attribute-directive
+//bo luon cho module quan li

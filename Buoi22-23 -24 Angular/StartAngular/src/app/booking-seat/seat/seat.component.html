@@ -1,0 +1,9 @@
+<!-- disabled de cam khong cho chon ghe co trang thai true la da dat roi -->
+<!-- ngClass de add class cam vao -->
+<button class='btn m-2'
+ [disabled]="seatItem.TrangThai" 
+ [ngClass]="{'not__allow__button':seatItem.TrangThai, 'btn-dark': !isChoosen, 'btn-success' : isChoosen}"
+ (click)="bookSeat()"
+ >
+ {{seatItem.SoGhe}}
+</button>

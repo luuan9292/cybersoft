@@ -17,6 +17,7 @@ import { DirectivesModule } from './directives/directives.module';
 import { AttributDirectiveModule } from './attribut-directive/attribut-directive.module';
 import { NgContentComponent } from './ng-content/ng-content.component';
 import { ItemCardComponent } from './ng-content/item-card/item-card.component';
+import { BookingSeatModule } from './booking-seat/booking-seat.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ItemCardComponent } from './ng-content/item-card/item-card.component';
     AppRoutingModule,
     LayoutDemoModule,
     DirectivesModule,
-    AttributDirectiveModule
+    AttributDirectiveModule,
+    BookingSeatModule
   ],
   providers: [],
   bootstrap: [AppComponent]

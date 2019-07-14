@@ -1,0 +1,8 @@
+<!-- Input la ki thuat truyen tu cha sang con -->
+
+<!-- Truyen du lieu qua cho con la cai array cua cha -->
+<!-- <app-demo-input-child [objArrFromParents]="objArr"></app-demo-input-child> -->
+
+
+<!-- Ky thuat giong ngContent, studentFromParents=objArr[0] va studentFromParents=objArr[1] -->
+<app-demo-input-child [studentFromParents]="student" *ngFor="let student of objArr"></app-demo-input-child>

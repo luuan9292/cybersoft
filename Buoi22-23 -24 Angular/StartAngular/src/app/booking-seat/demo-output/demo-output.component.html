@@ -1,0 +1,7 @@
+<!-- Input la ki thuat truyen tu con sang cha -->
+<div class='d-flex'>
+    <!-- Thang con emit ra thi thang cha cung kich hoat ham getNameFromChild, ham nay nhan tham so $event de chua du lieu thang con nha ra -->
+    <app-demo-output-child (outputName)="getNameFromChild($event)" [studentFromParent]="student" *ngFor="let student of studentArr"></app-demo-output-child>
+</div>
+
+<p>Choosen student: {{name}}</p>

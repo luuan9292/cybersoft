@@ -1,0 +1,4 @@
+.not__allow__button {
+    background-color: red;
+    cursor: not-allowed;
+}

@@ -1,0 +1,11 @@
+<div class='d-flex'>
+    <div class='w-50'>
+        <app-seat (outputSeat)='handleOutputSeat($event)' [seatItem]="seat" *ngFor="let seat of seatArr"></app-seat>
+    </div>
+    <div class='w-50'>
+        <p *ngFor="let seat of bookingSeatArr">
+            Ghe: so {{seat.SoGhe}}; Gia: {{seat.Gia}}$
+            <span class="text-warning" (click)="handleCancelSeat(seat.SoGhe)">[Cancel]</span>
+        </p>
+    </div>
+</div>
