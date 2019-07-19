@@ -1,0 +1,77 @@
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Product</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- phai add vao module shopping cart de co the su dung doi tuong form -->
+                <!-- ngForm nhan submit no se lay du lieu va tao luon 1 object mac dinh no 
+                    khong lay het tat ca o nen phai dat name can lay cho no va ngModel-->
+                <!-- tat ca input se tro thanh con cua thang ngForm -->
+
+                <!-- tat cac button nam trong form mac dinh la submit nen trong form se co event submit -->
+                <form #formAdd="ngForm" (submit)="handleSubmit(formAdd)">
+                    <!-- Truyen nguyen cai formAdd vao -->
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <!-- pattern dung de viet rexg -->
+                        <input required #nameControl="ngModel" type="text" name="name" ngModel pattern="[A-Z a-z]+" class="form-control">
+                        <!-- div chi hien thi khi name bi loi, nameControl la ref tro den ca o input -->
+                        <!-- touched (da focus vao) va dirty (da danh chu vao) cung giong errors la cac thuoc tinh, con nhieu cai nua console.log ra xem -->
+                        <!-- submitted ca form bi loi khi co loi -->
+                        <div *ngIf="nameControl.errors && (nameControl.touched || nameControl.dirty || formAdd.submitted)">
+                            <!-- chi hien khi loi la require, co che mac dinh la two way binding -->
+                            <p class="alert alert-danger" *ngIf="nameControl.errors.required">
+                                Please fill the name
+                            </p>
+                            <p class="alert alert-danger" *ngIf="nameControl.errors.pattern">
+                                    Name must be letters
+                                </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Image</label>
+                        <input type="text" name="image" ngModel class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Description</label>
+                        <!-- ngModel la object mac dinh cua form -->
+                        <input required minlength="60" maxlength="500" #descControl="ngModel" type="text"
+                            name="description" ngModel class="form-control">
+                        <div *ngIf="descControl.errors && (descControl.touched || descControl.dirty)">
+                            <p class="alert alert-danger" *ngIf="descControl.errors.required">
+                                Please fill description
+                            </p>
+                            <p class="alert alert-danger" *ngIf="descControl.errors.minlength">
+                                Description must be at atleast 60 characters
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Price</label>
+                        <input type="text" name="price" ngModel class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Inventory: </label>
+                        <input type="text" name="inventory" ngModel class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Rating: </label>
+                        <input type="text" name="rating" ngModel class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <!-- neu bi sai thi invalid la true thi nut button se bi vo hieu hoa -->
+                        <button class="btn btn-success" [disabled]="formAdd.invalid">Submit</button>
+                        <!-- de type la button neu khong no mac dinh la submit -->
+                        <button class="btn btn-info" type="buton" (click)="handleDemoEdit()">Demo Edit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

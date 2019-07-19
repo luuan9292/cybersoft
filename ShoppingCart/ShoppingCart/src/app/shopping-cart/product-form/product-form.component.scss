@@ -1,0 +1,8 @@
+// khi xai ngForm thi no se sinh ra cac class nay
+input.ng-valid.ng-dirty {
+    border-left: 3px solid green;
+}
+
+input.ng-invalid.ng-dirty {
+    border-left: 3px solid red
+}

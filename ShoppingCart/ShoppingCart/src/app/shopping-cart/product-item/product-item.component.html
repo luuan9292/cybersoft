@@ -1,0 +1,10 @@
+<div class="card p-2">
+    <img style="height:280px;" [src]="prod.image" class="w-100"
+        alt="">
+        <!-- them dau ? de tranh truong hop prod bi undefined neu server lo tra ve du lieu sai (co thi them name con khong co thi thoi) -->
+        <p class="lead">{{prod?.name}}</p> 
+    <p>
+        {{prod?.description}}
+    </p>
+    <button class="btn btn-success">Cart</button>
+</div>
