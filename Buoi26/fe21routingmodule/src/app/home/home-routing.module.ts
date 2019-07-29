@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { TrangChuComponent } from './trang-chu/trang-chu.component';
 import { TinTucComponent } from './tin-tuc/tin-tuc.component';
+import { DangNhapComponent } from './dang-nhap/dang-nhap.component';
+import { DangKyComponent } from './dang-ky/dang-ky.component';
+import { ChiTietPhimComponent } from './chi-tiet-phim/chi-tiet-phim.component';
 
 //Dinh nghia link cho web
 const routes: Routes = [
@@ -24,6 +27,18 @@ const routes: Routes = [
       {
         path: 'danh-sach-phim',
         loadChildren: "./danh-sach-phim/danh-sach-phim.module#DanhSachPhimModule"
+      },
+      {
+        path: 'dang-nhap',
+        component: DangNhapComponent
+      },
+      {
+        path: 'dang-ky',
+        component: DangKyComponent
+      },
+      {
+        path: 'chi-tiet/:id',
+        component: ChiTietPhimComponent
       }
     ]
   }

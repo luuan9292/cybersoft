@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-5 mx-auto">
+            <form #registerForm="ngForm" (submit)="_signUp(registerForm.value)">
+                <h4 class="display-4">Đăng Ký</h4>
+                <div class="form-group">
+                    <label for="">Tài Khoản</label>
+                    <input name="taiKhoan" ngModel type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Mật Khẩu</label>
+                    <input name="matKhau" ngModel type="text" class="form-control">
+
+                </div>
+                <div class="form-group">
+                    <label for="">Họ Tên: </label>
+                    <input name="hoTen" ngModel type="text" class="form-control">
+
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input name="email" ngModel type="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Số ĐT</label>
+                    <input name="soDt" ngModel type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success" type="submit">Đăng Ký</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

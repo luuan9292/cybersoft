@@ -20,18 +20,20 @@
                     <div class="form-group">
                         <label for="">Name</label>
                         <!-- pattern dung de viet rexg -->
-                        <input required #nameControl="ngModel" type="text" name="name" ngModel pattern="[A-Z a-z]+" class="form-control">
+                        <input required #nameControl="ngModel" type="text" name="name" ngModel pattern="[A-Z a-z]+"
+                            class="form-control">
                         <!-- div chi hien thi khi name bi loi, nameControl la ref tro den ca o input -->
                         <!-- touched (da focus vao) va dirty (da danh chu vao) cung giong errors la cac thuoc tinh, con nhieu cai nua console.log ra xem -->
                         <!-- submitted ca form bi loi khi co loi -->
-                        <div *ngIf="nameControl.errors && (nameControl.touched || nameControl.dirty || formAdd.submitted)">
+                        <div
+                            *ngIf="nameControl.errors && (nameControl.touched || nameControl.dirty || formAdd.submitted)">
                             <!-- chi hien khi loi la require, co che mac dinh la two way binding -->
                             <p class="alert alert-danger" *ngIf="nameControl.errors.required">
                                 Please fill the name
                             </p>
                             <p class="alert alert-danger" *ngIf="nameControl.errors.pattern">
-                                    Name must be letters
-                                </p>
+                                Name must be letters
+                            </p>
                         </div>
                     </div>
                     <div class="form-group">

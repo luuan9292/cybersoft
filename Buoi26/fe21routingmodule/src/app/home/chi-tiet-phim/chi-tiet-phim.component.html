@@ -1,0 +1,30 @@
+<h1 class="display-4">{{movieDetail?.tenPhim}}</h1>
+<img [src]="movieDetail?.hinhAnh" />
+<div>
+    <iframe width="756" height="425" [src]="movieDetail?.trailer | safe" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+</div>
+<!-- Dinh nghia 1 cai pipe de bao angular link youtube an toan neu ko angular se chan khong cho hien thi -->
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Loai rap</th>
+            <th>Cum Rap</th>
+            <th>Rap</th>
+            <th>Gio chieu</th>
+            <th>Hanh dong</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of movieDetail?.lichChieu">
+            <td>{{item?.thongTinRap.tenHeThongRap}}</td>
+            <td>{{item?.thongTinRap.tenCumRap}}</td>
+            <td>{{item?.thongTinRap.tenRap}}</td>
+            <td>{{item?.ngayChieuGioChieu | date:'dd/MM/yyy, hh:mm'}} </td>
+            <td><button class="btn btn-success">Dat ve</button></td>
+
+        </tr>
+    </tbody>
+</table>
