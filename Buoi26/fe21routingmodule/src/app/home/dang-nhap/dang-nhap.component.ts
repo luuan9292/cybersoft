@@ -31,13 +31,16 @@ export class DangNhapComponent implements OnInit {
     //Phuong thuc gui len server
     //Goi ham ben service
     this.userService.signIn(userLogin).subscribe(
-      (res) => {
+      (res:any) => {
 
         //local chi duoc phep luu chuoi
         //accessToken duoc tra ve moi lan dang nhap, de xac nhan user
         //moi lan sign out thi database se xoa no, dang nhap se cap 1 cai moi
         //dinh kem trong header de xac nhan quyen han cua user
         localStorage.setItem('loginUser', JSON.stringify(res));
+
+        delete res.accessToken; //accessToken quan trong nen khong nen set lung tung, xoa di
+        this.userService.setCurrentUser(res) //luu dung lieu vao bien trong service de thuc hien chuc nang xac dinh login, logout
 
         //Chuyen toi trang home khi dang nhap thanh cong
         this.router.navigate(['/']) //navigate giup chuyen trang

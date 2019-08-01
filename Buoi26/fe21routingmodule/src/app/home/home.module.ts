@@ -7,9 +7,10 @@ import { TinTucComponent } from './tin-tuc/tin-tuc.component';
 import { MaterialModule } from '../shared/material.module';
 import { DangKyComponent } from './dang-ky/dang-ky.component';
 import { DangNhapComponent } from './dang-nhap/dang-nhap.component';
-import { FormsModule } from '@angular/forms';
+
 import { ChiTietPhimComponent } from './chi-tiet-phim/chi-tiet-phim.component';
-import { PipeModule } from '../pipe/pipe.module';
+
+import { ShareModule } from '../shared/share.module';
 
 
 @NgModule({
@@ -20,8 +21,7 @@ import { PipeModule } from '../pipe/pipe.module';
 
     MaterialModule,
 
-    FormsModule,
-    PipeModule
+    ShareModule //bao gom 2 module chua trong no
   ]
 })
 export class HomeModule { }
