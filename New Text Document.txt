@@ -1,0 +1,9 @@
+service worker luu lai cache front end trong browser
+cache chia lam 2 loai
+front end luu lai html css js da render luu lai
+back end
+luu di duong dan cua hinh thi moi luu cache hinh, con de trong public no se ko luus
+
+tao file assets => img, scss
+
+code slitting, su dung lazy loading ko gop tat ca vao file bundle ma chia ra chung nao xai moi goi

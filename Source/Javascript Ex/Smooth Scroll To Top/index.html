@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Smooth Scroll To Top</title>
+
+	<style type="text/css" media="screen">
+		#scrollToTop {
+			border: none;
+			width: 50px;
+			height: 50px;
+			background-color: black;
+			color: black;
+			position: fixed;
+			bottom: 1rem;
+			right: 1rem;
+			cursor: pointer;
+			border-radius: 50%;
+		}
+	</style>
+
+
+</head>
+<body>
+	<div style="height: 2000px;"></div>
+
+	<button id='scrollToTop'></button>
+
+	<script type="text/javascript">
+
+		let button = document.getElementById('scrollToTop');
+
+		let handleScrollTop = () => {
+			if(window.scrollY > 0) {
+				setTimeout(function() {
+					window.scrollTo(0, window.scrollY - 30);
+					handleScrollTop();
+				}, 6)
+			}
+		}
+
+		button.addEventListener('click', handleScrollTop);
+
+
+	</script>
+</body>
+</html>

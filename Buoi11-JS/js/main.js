@@ -38,3 +38,12 @@ function XepLoaiHocLuc() {
     //Xoa class khoi the span
     document.getElementById("XepLoai").classList.remove('btn');
 }
+
+
+
+// Chuyen object thanh array
+// Object.keys(obj).map((key) => {
+//     return [key]:obj[key]
+// })
+
+// --> [[key:value, [key2:value2]]]

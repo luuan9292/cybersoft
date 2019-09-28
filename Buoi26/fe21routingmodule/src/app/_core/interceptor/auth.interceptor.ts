@@ -1,4 +1,4 @@
-//la 1 middleware nam giau broser va server, dung de add header 1 lan thoi
+//la 1 middleware nam giua browser va server, dung de add header 1 lan thoi
 //Khong phai add tay nhu trong thu muc service va gan header o bat ki cho nao nua
 //Tat ca request deu phai di qua interceptor va duoc gan token vao
 //Phai import trong provider cua app module

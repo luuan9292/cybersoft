@@ -1,0 +1,16 @@
+.services {
+    background-color: $color__white__3;
+    padding: 5% 0;
+    .services__left {
+        text-align: center;
+        i {
+            font-size: 3rem;
+            padding-bottom: 3%;
+            color: $color__green;
+        }
+    }
+    p{
+        font-size: 20px;
+    }
+
+}
